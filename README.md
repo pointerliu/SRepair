@@ -7,7 +7,7 @@ Welcome to the official repository for **SRepair**, a novel approach leveraging 
 This repository includes:
 
 - **Source Code**: Implementation of the SRepair approach, including symbolic regression algorithms and repair logic tailored for hardware design code.
-- **Experiment Results**: Detailed results of the experiments conducted to evaluate SRepair, including performance metrics and benchmarks.
+- **Experiment Results**: Detailed results of the experiments conducted to evaluate SRepair.
 - **Datasets**: Hardware design code samples used during our experiments.
 - **Scripts**: Tools for running experiments, reproducing results, and generating visualizations.
 
@@ -21,7 +21,7 @@ This repository includes:
    ```
 
 2. **Set Up the Environment**:
-   Our approach is built upon on RTL-Repair. Follow the instructions in the [RR-README](rtl-repair/RR-README.md) to install dependencies and configure the environment.
+   Our approach builds upon RTL-Repair. Follow the instructions in the [RR-README](rtl-repair/RR-README.md) to install dependencies and configure the environment.
 
 3. **Run Experiments**:
    See the [docs](./docs) for detailed instructions.
