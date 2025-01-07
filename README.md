@@ -7,8 +7,8 @@ Welcome to the official repository for **SRepair**, a novel approach leveraging 
 This repository contains the following components:
 
 - **docs**: Detailed instructions for evaluating four techniques across various datasets.
-- **rtl-repair**: Source code for **SRepair**, built upon **RTL-Repair**. Our approach integrates a Symbolic Regression Network and synthesizable templates, located in `rtl-repair/rtlrepair/snn_templates`.
-- **Strider**: Source code for **Strider**.
+- **rtl-repair**: Source code for **SRepair**, built upon [**RTL-Repair**](https://dl.acm.org/doi/abs/10.1145/3620666.3651346). Our approach integrates a Symbolic Regression Network and synthesizable templates, located in `rtl-repair/rtlrepair/snn_templates`.
+- **Strider**: Source code for [**Strider**](https://ieeexplore.ieee.org/abstract/document/10354074/).
 - **results**: Results of four approaches evaluated on publicly available datasets.
 - **results-aug**: Results of four approaches evaluated on augmented datasets.
 
@@ -39,5 +39,3 @@ In this demo, the goal is for SRN to infer the underlying mapping relationship f
 For this example, the target function is defined as: `y = x[0] + ~x[1] + ~x[2]`
 
 We generate input data randomly and compute the corresponding output values using the above function. These data pairs are then fed into the SRN, which is designed to predict the relationship without any explicit knowledge of the function's mathematical expression.
-
-## Reference
