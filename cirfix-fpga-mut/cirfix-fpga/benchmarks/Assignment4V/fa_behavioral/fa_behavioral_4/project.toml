@@ -1,0 +1,16 @@
+[project]
+directory = "."
+sources = ["./fixed/fa_behavioral.v"]
+toplevel = "fa_behavioral"
+
+[[bugs]]
+name = "fa_behavioral_4"
+original = "./fixed/fa_behavioral.v"
+buggy = "./buggy/fa_behavioral.v"
+
+# This is the original testbench from CirFix
+[[testbenches]]
+name = "fa_behavioral_tb.v"
+sources = ["./fixed/fa_behavioral.v"]
+output = "output_decoder3e_test_t1.txt"
+table = "./fixed/test.csv"

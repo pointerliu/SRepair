@@ -1,0 +1,13 @@
+diff -u buggy/decl7s_test.v fixed/decl7s_test.v
+--- buggy/decl7s_test.v	2022-06-13 02:48:59.705702000 -0700
++++ fixed/decl7s_test.v	2022-06-13 02:48:59.705702000 -0700
+@@ -21,7 +21,8 @@
+   4'b1010: led7s=7'b1110111;
+   4'b1011: led7s=7'b1111100;
+   4'b1100: led7s=7'b0111001;
+-  4'b1101: led7s=7'b1111001;
++  4'b1101: led7s=7'b1011110;
++  4'b1110: led7s=7'b1111001;
+   4'b1111: led7s=7'b1110001;
+ endcase
+ end 

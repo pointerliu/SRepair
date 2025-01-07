@@ -1,0 +1,16 @@
+[project]
+directory = "."
+sources = ["./fixed/JG3_test.v"]
+toplevel = "JG3"
+
+[[bugs]]
+name = "JG3_2"
+original = "./fixed/JG3_test.v"
+buggy = "./buggy/JG3_test.v"
+
+# This is the original testbench from CirFix
+[[testbenches]]
+name = "JG3_tb.v"
+sources = ["./fixed/JG3_tb.v"]
+output = "output_JG3_test_t1.txt"
+table = "./fixed/test.csv"

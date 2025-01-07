@@ -1,0 +1,16 @@
+[project]
+directory = "."
+sources = ["./fixed/counter6bit_test.v"]
+toplevel = "counter6bit_test"
+
+[[bugs]]
+name = "counter6bit_5"
+original = "./fixed/counter6bit_test.v"
+buggy = "./buggy/counter6bit_test.v"
+
+# This is the original testbench from CirFix
+[[testbenches]]
+name = "counter6bit_tb.v"
+sources = ["./fixed/counter6bit_tb.v"]
+output = "test.txt"
+table = "./fixed/test.txt"

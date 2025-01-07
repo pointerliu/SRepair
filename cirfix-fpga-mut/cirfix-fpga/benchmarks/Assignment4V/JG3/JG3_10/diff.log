@@ -1,0 +1,12 @@
+diff -u buggy/JG3_test.v fixed/JG3_test.v
+--- buggy/JG3_test.v	2022-06-13 02:48:55.645834426 -0700
++++ fixed/JG3_test.v	2022-06-13 02:48:55.645834426 -0700
+@@ -13,7 +13,7 @@
+ 			3'd0: begin X<=0;Y<=1; end
+ 			3'd5: begin X<=1;Y=0; end
+ 			3'd6: begin X<=1;Y=0; end
+-			3'd6: begin X<=1;Y=0; end
++			3'd7: begin X<=1;Y=0; end
+ 			default: begin X<=0;Y=0; end
+ 		endcase	
+ 		

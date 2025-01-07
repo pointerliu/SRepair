@@ -1,0 +1,12 @@
+diff -u buggy/decoder3e_test.v fixed/decoder3e_test.v
+--- buggy/decoder3e_test.v	2022-06-13 02:48:56.297813114 -0700
++++ fixed/decoder3e_test.v	2022-06-13 02:48:56.297813114 -0700
+@@ -9,7 +9,7 @@
+ 
+ 
+ always @(*)begin
+-  if(ena) y = 0;
++  if(!ena) y = 0;
+   else begin
+     case(a)
+         3'b000: y = 8'b0000_0001;

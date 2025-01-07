@@ -1,0 +1,16 @@
+[project]
+directory = "."
+sources = ["./fixed/mux21_test.v"]
+toplevel = "mux21"
+
+[[bugs]]
+name = "mux21_2"
+original = "./fixed/mux21_test.v"
+buggy = "./buggy/mux21_test.v"
+
+# This is the original testbench from CirFix
+[[testbenches]]
+name = "mux21_tb.v"
+sources = ["./fixed/mux21_tb.v"]
+output = "output_mux21_test_t1.txt"
+table = "./fixed/test.csv"

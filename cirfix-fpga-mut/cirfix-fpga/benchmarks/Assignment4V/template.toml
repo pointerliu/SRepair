@@ -1,0 +1,16 @@
+[project]
+directory = "."
+sources = ["./fixed/$(FIX_V).v"]
+toplevel = "$(FIX_V)"
+
+[[bugs]]
+name = "$(BUG_NAME)"
+original = "./fixed/$(FIX_V).v"
+buggy = "./buggy/$(FIX_V).v"
+
+# This is the original testbench from CirFix
+[[testbenches]]
+name = "$(TB_NAME).v"
+sources = ["./fixed/$(TB_NAME).v"]
+output = "output_$(FIX_V)_t1.txt"
+table = "./fixed/test.csv"

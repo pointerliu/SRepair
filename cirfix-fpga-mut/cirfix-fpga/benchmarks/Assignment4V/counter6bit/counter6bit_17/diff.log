@@ -1,0 +1,24 @@
+diff -u buggy/counter6bit_test.v fixed/counter6bit_test.v
+--- buggy/counter6bit_test.v	2022-06-13 02:48:58.681735336 -0700
++++ fixed/counter6bit_test.v	2022-06-13 02:48:58.681735336 -0700
+@@ -8,8 +8,6 @@
+     reg [23:0] Q;
+     reg F_OUT;
+ 
+-    initial
+-        Q = 0;
+ 
+ 
+ 		
+@@ -17,9 +15,8 @@
+     always @(posedge F_IN) begin
+         if (CLR)
+             Q <= 0;
+-        
+-		
+-
++        else if (ENA == 0)
++            Q <= Q;
+         else if (Q[3:0] != 9)
+             Q[3:0] <= Q[3:0] + 1;
+         else begin

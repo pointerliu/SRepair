@@ -1,0 +1,12 @@
+diff -u buggy/latch24_test.v fixed/latch24_test.v
+--- buggy/latch24_test.v	2022-06-13 02:48:56.313812591 -0700
++++ fixed/latch24_test.v	2022-06-13 02:48:56.313812591 -0700
+@@ -4,7 +4,7 @@
+     input clk;
+     output[23:0] q;
+     reg [23:0] q;
+-    always@ (clk)
++    always@ (posedge clk)
+         q = d;
+ 
+ endmodule

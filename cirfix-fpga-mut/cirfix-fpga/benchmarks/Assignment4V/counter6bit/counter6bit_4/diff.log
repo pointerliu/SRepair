@@ -1,0 +1,12 @@
+diff -u buggy/counter6bit_test.v fixed/counter6bit_test.v
+--- buggy/counter6bit_test.v	2022-06-13 02:48:56.789797042 -0700
++++ fixed/counter6bit_test.v	2022-06-13 02:48:56.789797042 -0700
+@@ -5,7 +5,7 @@
+     output [23:0] Q;  
+     
+     reg [23:0] Q;
+-    reg [19:0] temp_bcd=0;
++    reg [19:0] temp_bcd=1;
+     reg F_OUT;
+     
+ 

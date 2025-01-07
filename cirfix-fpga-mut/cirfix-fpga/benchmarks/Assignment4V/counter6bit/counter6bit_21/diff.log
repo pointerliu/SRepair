@@ -1,0 +1,26 @@
+diff -u buggy/counter6bit_test.v fixed/counter6bit_test.v
+--- buggy/counter6bit_test.v	2022-06-13 02:48:58.993725171 -0700
++++ fixed/counter6bit_test.v	2022-06-13 02:48:58.993725171 -0700
+@@ -13,11 +13,12 @@
+ 		
+ 
+ always@(posedge F_IN)
++if(ENA)begin
+ if(CLR)begin
+ if(Q!=24'bxxxxxxxxxxxxxxxxxxxxxxxx) Q<=0;
++if(F_IN) Q<=0;
+ end
+ else begin
+-    if(Q==24'bxxxxxxxxxxxxxxxxxxxxxxxx) Q<=0;
+       if(Q[3:0] != 4'd9)
+                 Q[3:0] <= Q[3:0]+1;
+         else begin
+@@ -45,6 +46,7 @@
+             end
+         end
+    end
++end
+ 		
+ 
+   endmodule
+\ No newline at end of file

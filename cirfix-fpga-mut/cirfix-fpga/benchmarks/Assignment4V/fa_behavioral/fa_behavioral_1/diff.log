@@ -1,0 +1,12 @@
+diff -u buggy/fa_behavioral.v fixed/fa_behavioral.v
+--- buggy/fa_behavioral.v	2022-06-13 02:48:55.829828408 -0700
++++ fixed/fa_behavioral.v	2022-06-13 02:48:55.829828408 -0700
+@@ -6,7 +6,7 @@
+ 
+ 
+ 
+-       assign s=(a|b|ci);
++       assign s=(a^b^ci);
+        assign co=((a&b)|(a&ci)|(b&ci));
+ 
+ 

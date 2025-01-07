@@ -1,0 +1,16 @@
+[project]
+directory = "."
+sources = ["./fixed/latch24_test.v"]
+toplevel = "latch24_test"
+
+[[bugs]]
+name = "latch24_2"
+original = "./fixed/latch24_test.v"
+buggy = "./buggy/latch24_test.v"
+
+# This is the original testbench from CirFix
+[[testbenches]]
+name = "latch24_tb.v"
+sources = ["./fixed/latch24_tb.v"]
+output = "output_latch24_test_t1.txt"
+table = "./fixed/test.csv"

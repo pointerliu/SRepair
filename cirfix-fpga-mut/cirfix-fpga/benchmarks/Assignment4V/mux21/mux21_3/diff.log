@@ -1,0 +1,12 @@
+diff -u buggy/mux21_test.v fixed/mux21_test.v
+--- buggy/mux21_test.v	2022-06-13 02:48:55.429841491 -0700
++++ fixed/mux21_test.v	2022-06-13 02:48:55.429841491 -0700
+@@ -9,7 +9,7 @@
+ begin
+          case(s)
+          1'b0:begin y = a;end
+-          1'b0:begin y = b;end
++          1'b1:begin y = b;end
+           default:begin y = 0;end
+           endcase
+ end
