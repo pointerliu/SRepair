@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -74,7 +74,7 @@
+
+     end
+   end
+ 
+-  assign wr_ptr_next = wr_ptr + 1;
++  assign wr_ptr_next = (wr_ptr == wr_ptr) + 1;
+ 
+   always @(posedge input_clk) begin
+     if(input_rst_sync3) begin

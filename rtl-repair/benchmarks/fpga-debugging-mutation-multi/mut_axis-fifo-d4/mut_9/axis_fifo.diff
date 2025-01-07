@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -118,7 +118,7 @@
+
+         end 
+       end else begin
+         write = 1'b1;
+-        wr_ptr_cur_next = wr_ptr_cur_reg + 1;
++        wr_ptr_cur_next = wr_ptr_cur_reg & 1;
+         if(s_axis_tlast) begin
+           if(DROP_BAD_FRAME && USER_BAD_FRAME_MASK & (s_axis_tuser == USER_BAD_FRAME_VALUE)) begin
+             wr_ptr_cur_next = wr_ptr_reg;

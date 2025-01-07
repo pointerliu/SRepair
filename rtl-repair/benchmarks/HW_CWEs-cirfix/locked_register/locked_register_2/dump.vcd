@@ -1,0 +1,48 @@
+$date
+	Sat May 11 21:45:20 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_bug1 $end
+$scope module UUT $end
+$var wire 16 ! Data_in [15:0] $end
+$var wire 1 " clk $end
+$var wire 1 # debug_unlocked $end
+$var wire 1 $ lock_status $end
+$var wire 1 % resetn $end
+$var wire 1 & write $end
+$var reg 16 ' Data_out [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx '
+0&
+0%
+0$
+0#
+0"
+b10000 !
+$end
+#10
+b0 '
+1"
+#20
+0"
+1#
+1$
+1&
+b100010001 !
+1%
+#30
+1"
+#40
+0"

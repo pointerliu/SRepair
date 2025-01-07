@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -60,7 +60,7 @@
+
+   always @(*) begin
+     state_next = STATE_IDLE;
+     cycle_count_next = cycle_count_reg;
+-    temp_tdata_next = temp_tdata_reg;
++    temp_tdata_next = ~temp_tdata_reg;
+     temp_tkeep_next = temp_tkeep_reg;
+     temp_tlast_next = temp_tlast_reg;
+     temp_tuser_next = temp_tuser_reg;

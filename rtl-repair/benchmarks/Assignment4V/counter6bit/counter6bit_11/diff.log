@@ -1,0 +1,12 @@
+diff -u buggy/counter6bit_test.v fixed/counter6bit_test.v
+--- buggy/counter6bit_test.v	2022-06-13 02:48:58.181751628 -0700
++++ fixed/counter6bit_test.v	2022-06-13 02:48:58.181751628 -0700
+@@ -12,7 +12,7 @@
+ 
+ 		
+ 
+-    always @(posedge CLR or posedge F_IN)
++    always @(posedge F_IN)
+     begin
+         if(CLR)Q <= 0;
+         else begin

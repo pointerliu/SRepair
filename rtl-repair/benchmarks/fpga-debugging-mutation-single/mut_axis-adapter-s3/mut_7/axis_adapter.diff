@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -63,7 +63,7 @@
+
+     temp_tdata_next = temp_tdata_reg;
+     temp_tkeep_next = temp_tkeep_reg;
+     temp_tlast_next = temp_tlast_reg;
+-    temp_tuser_next = temp_tuser_reg;
++    temp_tuser_next = ~temp_tuser_reg;
+     output_axis_tdata_int = 0;
+     output_axis_tkeep_int = 0;
+     output_axis_tvalid_int = 0;

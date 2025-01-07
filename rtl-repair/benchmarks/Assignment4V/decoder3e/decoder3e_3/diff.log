@@ -1,0 +1,12 @@
+diff -u buggy/decoder3e_test.v fixed/decoder3e_test.v
+--- buggy/decoder3e_test.v	2022-06-13 02:48:56.289813375 -0700
++++ fixed/decoder3e_test.v	2022-06-13 02:48:56.289813375 -0700
+@@ -9,7 +9,7 @@
+ 
+ 
+ always@(ena or a)
+-casex (a) 
++casex ({ena,a}) 
+   4'b0xxx:y=8'b00000000;
+   4'b1000:y=8'b00000001;
+   4'b1001:y=8'b00000010;

@@ -1,0 +1,13 @@
+[[bugs]]
+name = "mut_8"
+original = "xlnxstream_2018_3.v"
+buggy = "buggy_xlnxstream_2018_3.v"
+
+[[testbenches]]
+name = "mut_axi-stream-s2_tb.v"
+table = "tb.csv"
+
+[project]
+directory = "."
+sources = [ "xlnxstream_2018_3.v",]
+toplevel = "xlnxstream_2018_3"

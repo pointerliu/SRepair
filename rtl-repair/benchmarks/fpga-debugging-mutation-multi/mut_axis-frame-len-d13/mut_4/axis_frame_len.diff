@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -63,7 +63,7 @@
+
+       frame_len_valid_reg <= 0;
+       frame_reg <= 1'b0;
+     end else begin
+-      frame_len_reg <= frame_len_next;
++      frame_len_reg <= ~frame_len_next;
+       frame_len_valid_reg <= frame_len_valid_next;
+       frame_reg <= frame_next;
+     end

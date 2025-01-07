@@ -1,0 +1,16 @@
+[project]
+directory = "."
+sources = ["./fixed/decl7s_test.v"]
+toplevel = "decl7s_test"
+
+[[bugs]]
+name = "decl7s_2"
+original = "./fixed/decl7s_test.v"
+buggy = "./buggy/decl7s_test.v"
+
+# This is the original testbench from CirFix
+[[testbenches]]
+name = "decl7s_tb.v"
+sources = ["./fixed/decl7s_tb.v"]
+output = "output_decl7s_test_t1.txt"
+table = "./fixed/test.csv"

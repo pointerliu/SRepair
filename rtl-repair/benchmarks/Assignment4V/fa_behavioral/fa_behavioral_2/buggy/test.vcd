@@ -1,0 +1,62 @@
+$date
+	Thu Jan 11 10:38:50 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module fa_behavioral_tb $end
+$var wire 1 ! s $end
+$var wire 1 " co $end
+$var reg 1 # a $end
+$var reg 1 $ b $end
+$var reg 1 % ci $end
+$var reg 1 & instrumented_clk $end
+$var integer 32 ' f [31:0] $end
+$var integer 32 ( i [31:0] $end
+$scope module m $end
+$var wire 1 # a $end
+$var wire 1 $ b $end
+$var wire 1 % ci $end
+$var wire 1 " co $end
+$var wire 1 ! s $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b111 (
+b10000000000000000000000000000011 '
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#1
+1#
+1&
+#2
+0&
+#3
+1"
+1&
+1$
+#4
+0&
+#5
+1&
+#6
+0&
+#7
+1!
+1&
+b110 (
+1%
+#8

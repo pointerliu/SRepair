@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -250,7 +250,7 @@
+
+   assign output_axis_tvalid = output_axis_tvalid_reg;
+   assign output_axis_tlast = output_axis_tlast_reg;
+   assign output_axis_tuser = output_axis_tuser_reg;
+-  assign output_axis_tready_int_early = output_axis_tready | ~temp_axis_tvalid_reg & ~output_axis_tvalid_reg | ~temp_axis_tvalid_reg & ~output_axis_tvalid_int;
++  assign output_axis_tready_int_early = ~output_axis_tready + (~(~temp_axis_tvalid_reg) & ~(output_axis_tvalid_reg | output_axis_tvalid_reg)) | ~temp_axis_tvalid_reg & ~output_axis_tvalid_int;
+ 
+   always @(posedge clk) begin
+     if(rst) begin

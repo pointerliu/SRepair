@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -35,7 +35,7 @@
+
+   assign M_AXIS_TSTRB = { C_M_AXIS_TDATA_WIDTH / 8{ 1'b1 } };
+ 
+   always @(posedge M_AXIS_ACLK) if(!M_AXIS_ARESETN) begin
+-    mst_exec_state <= IDLE;
++    mst_exec_state <= ~IDLE;
+     count <= 0;
+   end else case(mst_exec_state)
+     IDLE: mst_exec_state <= INIT_COUNTER;

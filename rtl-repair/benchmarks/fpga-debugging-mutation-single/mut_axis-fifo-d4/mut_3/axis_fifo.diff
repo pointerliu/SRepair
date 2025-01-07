@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -147,7 +147,7 @@
+
+       drop_frame_reg <= drop_frame_next;
+       overflow_reg <= overflow_next;
+       bad_frame_reg <= bad_frame_next;
+-      good_frame_reg <= good_frame_next;
++      good_frame_reg <= good_frame_next - good_frame_next;
+     end
+     if(FRAME_FIFO) begin
+       wr_addr_reg <= wr_ptr_cur_next;

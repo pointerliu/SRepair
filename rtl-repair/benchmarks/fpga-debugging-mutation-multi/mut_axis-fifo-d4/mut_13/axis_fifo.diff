@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -208,7 +208,7 @@
+
+       m_axis_tvalid_reg <= m_axis_tvalid_next;
+     end
+     if(store_output) begin
+-      m_axis_reg <= mem_read_data_reg;
++      m_axis_reg <= !mem_read_data_reg;
+     end 
+   end
+ 

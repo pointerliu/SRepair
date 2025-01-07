@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -193,7 +193,7 @@
+
+ 
+   always @(*) begin
+     store_output = 1'b0;
+-    m_axis_tvalid_next = m_axis_tvalid_reg;
++    m_axis_tvalid_next = !m_axis_tvalid_reg;
+     if(m_axis_tready || !m_axis_tvalid) begin
+       store_output = 1'b1;
+       m_axis_tvalid_next = mem_read_data_valid_reg;

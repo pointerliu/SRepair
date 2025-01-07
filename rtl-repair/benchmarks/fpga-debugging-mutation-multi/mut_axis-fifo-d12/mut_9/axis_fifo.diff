@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -162,7 +162,7 @@
+
+ 
+   always @(*) begin
+     read = 1'b0;
+-    rd_ptr_next = rd_ptr_reg;
++    rd_ptr_next = ~rd_ptr_reg;
+     mem_read_data_valid_next = mem_read_data_valid_reg;
+     if(store_output || !mem_read_data_valid_reg) begin
+       if(!empty) begin

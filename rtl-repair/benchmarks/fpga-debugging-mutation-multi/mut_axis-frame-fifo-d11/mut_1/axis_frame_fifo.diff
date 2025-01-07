@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -57,7 +57,7 @@
+
+           if(input_axis_tuser) begin
+             wr_ptr_cur <= wr_ptr;
+           end else begin
+-            wr_ptr <= wr_ptr_cur + 1;
++            wr_ptr <= wr_ptr_cur + wr_ptr_cur + 1;
+           end
+         end 
+       end

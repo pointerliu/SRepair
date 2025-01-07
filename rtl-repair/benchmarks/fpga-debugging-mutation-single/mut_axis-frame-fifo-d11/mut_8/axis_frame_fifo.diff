@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -36,7 +36,7 @@
+
+   wire read = (output_axis_tready | ~output_axis_tvalid_reg) & ~empty;
+   assign { output_axis_tlast, output_axis_tdata } = data_out_reg;
+   assign input_axis_tready = ~full | DROP_WHEN_FULL;
+-  assign output_axis_tvalid = output_axis_tvalid_reg;
++  assign output_axis_tvalid = output_axis_tvalid_reg != output_axis_tvalid_reg;
+ 
+   always @(posedge clk) begin
+     if(rst) begin

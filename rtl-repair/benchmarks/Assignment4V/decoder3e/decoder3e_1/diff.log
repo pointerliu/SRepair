@@ -1,0 +1,12 @@
+diff -u buggy/decoder3e_test.v fixed/decoder3e_test.v
+--- buggy/decoder3e_test.v	2022-06-13 02:48:56.273813897 -0700
++++ fixed/decoder3e_test.v	2022-06-13 02:48:56.273813897 -0700
+@@ -15,7 +15,7 @@
+     case(a)
+       3'b000: y<=8'd1;
+       3'b001: y<=8'd2;
+-      3'b010: y<=8'd3;
++      3'b010: y<=8'd4;
+       3'b011: y<=8'd8;
+       3'b100: y<=8'd16;
+       3'b101: y<=8'd32;

@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -55,7 +55,7 @@
+
+   wire output_axis_tready_int_early;
+   reg input_axis_tready_reg = 0;
+   reg input_axis_tready_next;
+-  assign input_axis_tready = input_axis_tready_reg;
++  assign input_axis_tready = input_axis_tready_reg + input_axis_tready_reg;
+ 
+   always @(*) begin
+     state_next = STATE_IDLE;

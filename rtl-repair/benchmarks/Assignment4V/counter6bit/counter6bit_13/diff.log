@@ -1,0 +1,20 @@
+diff -u buggy/counter6bit_test.v fixed/counter6bit_test.v
+--- buggy/counter6bit_test.v	2022-06-13 02:48:58.333746675 -0700
++++ fixed/counter6bit_test.v	2022-06-13 02:48:58.337746545 -0700
+@@ -14,6 +14,8 @@
+ 
+ always @(posedge F_IN)
+ begin
++if(ENA==1)
++begin
+ if(Q[3:0]>8) 
+ begin
+ Q=Q+24'b000000000000000000010000;
+@@ -23,6 +25,7 @@
+ Q=Q+24'b000000000000000000000001;
+ if(CLR == 1)
+ Q=24'b000000000000000000000000;
++end
+ 
+ 
+ 

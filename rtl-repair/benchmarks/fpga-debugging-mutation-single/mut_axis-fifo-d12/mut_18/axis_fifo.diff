@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -89,7 +89,7 @@
+
+   assign m_axis_tvalid = m_axis_tvalid_reg;
+   assign m_axis_tdata = m_axis_reg[DATA_WIDTH-1:0];
+   assign m_axis_tkeep = (KEEP_ENABLE)? m_axis_reg[KEEP_OFFSET +: KEEP_WIDTH] : { KEEP_WIDTH{ 1'b1 } };
+-  assign m_axis_tlast = (LAST_ENABLE)? m_axis_reg[LAST_OFFSET] : 1'b1;
++  assign m_axis_tlast = (!LAST_ENABLE)? m_axis_reg[LAST_OFFSET] : 1'b1;
+   assign m_axis_tid = (ID_ENABLE)? m_axis_reg[ID_OFFSET +: ID_WIDTH] : { ID_WIDTH{ 1'b0 } };
+   assign m_axis_tdest = (DEST_ENABLE)? m_axis_reg[DEST_OFFSET +: DEST_WIDTH] : { DEST_WIDTH{ 1'b0 } };
+   assign m_axis_tuser = (USER_ENABLE)? m_axis_reg[USER_OFFSET +: USER_WIDTH] : { USER_WIDTH{ 1'b0 } };

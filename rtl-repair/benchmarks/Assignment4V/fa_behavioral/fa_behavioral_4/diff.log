@@ -1,0 +1,14 @@
+diff -u buggy/fa_behavioral.v fixed/fa_behavioral.v
+--- buggy/fa_behavioral.v	2022-06-13 02:48:55.861827362 -0700
++++ fixed/fa_behavioral.v	2022-06-13 02:48:55.861827362 -0700
+@@ -6,8 +6,8 @@
+ 
+ 
+ 
+-       assign s=((a&~b)|(~a&b)&~ci)|((~(a&~b)|(~a&b))&ci);
+-       assign co=~(~(a&~b)|(~a&b)&ci)&(~(a&b));
++       assign s=(((a&~b)|(~a&b))&~ci)|(~((a&~b)|(~a&b))&ci);
++       assign co=~(~(((a&~b)|(~a&b))&ci)&(~(a&b)));
+ 
+ 
+ 

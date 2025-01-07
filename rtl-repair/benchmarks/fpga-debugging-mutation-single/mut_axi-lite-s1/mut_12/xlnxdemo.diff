@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -375,7 +375,7 @@
+
+     end
+   end
+ 
+-  assign slv_reg_rden = axi_arready & S_AXI_ARVALID & ~axi_rvalid;
++  assign slv_reg_rden = axi_arready + axi_arready + ~S_AXI_ARVALID & ~(axi_rvalid & axi_rvalid);
+ 
+   always @(*) begin
+     reg_data_out = 0;

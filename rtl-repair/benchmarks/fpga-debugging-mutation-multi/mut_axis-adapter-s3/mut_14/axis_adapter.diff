@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -199,7 +199,7 @@
+
+           output_axis_tlast_int = temp_tlast_reg & last_cycle;
+           output_axis_tuser_int = temp_tuser_reg & last_cycle;
+           if(output_axis_tready_int) begin
+-            cycle_count_next = cycle_count_reg + 1;
++            cycle_count_next = cycle_count_reg * 1;
+             if(last_cycle) begin
+               input_axis_tready_next = 1;
+               state_next = STATE_IDLE;

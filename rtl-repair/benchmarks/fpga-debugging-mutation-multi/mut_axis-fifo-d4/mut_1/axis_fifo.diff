@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -103,7 +103,7 @@
+
+     overflow_next = 1'b0;
+     bad_frame_next = 1'b0;
+     good_frame_next = 1'b0;
+-    wr_ptr_next = wr_ptr_reg;
++    wr_ptr_next = wr_ptr_reg == wr_ptr_reg;
+     wr_ptr_cur_next = wr_ptr_cur_reg;
+     if(s_axis_tready && s_axis_tvalid) begin
+       if(!FRAME_FIFO) begin

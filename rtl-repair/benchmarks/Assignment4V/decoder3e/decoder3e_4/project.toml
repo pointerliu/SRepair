@@ -1,0 +1,16 @@
+[project]
+directory = "."
+sources = ["./fixed/decoder3e_test.v"]
+toplevel = "decoder3e_test"
+
+[[bugs]]
+name = "decoder3e_4"
+original = "./fixed/decoder3e_test.v"
+buggy = "./buggy/decoder3e_test.v"
+
+# This is the original testbench from CirFix
+[[testbenches]]
+name = "decoder3e_tb.v"
+sources = ["./fixed/decoder3e_tb.v"]
+output = "output_decoder3e_test_t1.txt"
+table = "./fixed/test.csv"

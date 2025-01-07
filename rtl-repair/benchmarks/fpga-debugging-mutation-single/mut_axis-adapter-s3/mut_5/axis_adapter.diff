@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -271,7 +271,7 @@
+
+         if(output_axis_tready | ~output_axis_tvalid_reg) begin
+           output_axis_tdata_reg <= output_axis_tdata_int;
+           output_axis_tkeep_reg <= output_axis_tkeep_int;
+-          output_axis_tvalid_reg <= output_axis_tvalid_int;
++          output_axis_tvalid_reg <= output_axis_tvalid_int - output_axis_tvalid_int;
+           output_axis_tlast_reg <= output_axis_tlast_int;
+           output_axis_tuser_reg <= output_axis_tuser_int;
+         end else begin

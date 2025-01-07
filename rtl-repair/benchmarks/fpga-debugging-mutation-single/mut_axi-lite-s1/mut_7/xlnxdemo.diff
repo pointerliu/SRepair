@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -78,7 +78,7 @@
+
+   reg [C_S_AXI_DATA_WIDTH-1:0] reg_data_out;
+   integer byte_index;
+   assign S_AXI_AWREADY = axi_awready;
+-  assign S_AXI_WREADY = axi_wready;
++  assign S_AXI_WREADY = axi_wready + axi_wready;
+   assign S_AXI_BRESP = axi_bresp;
+   assign S_AXI_BVALID = axi_bvalid;
+   assign S_AXI_ARREADY = axi_arready;

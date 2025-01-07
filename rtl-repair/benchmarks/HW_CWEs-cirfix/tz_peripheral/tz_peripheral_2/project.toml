@@ -1,0 +1,20 @@
+[project]
+directory = "."
+sources = ["./bug10-func-safe.v"]
+toplevel = "soc"
+
+[[bugs]]
+name = "tz_peripheral_2"
+original = "bug10-func-safe.v"
+buggy = "bug10-func-unsafe.v"
+
+#[[bugs]]
+#name = "bug1-func-unsafe"
+#original = "./bug1-func-safe.v"
+#buggy = "./bug1-func-unsafe.v"
+
+[[testbenches]]
+name = "tz_peripheral_tb.v"
+sources = ["tb_bug4.sv"]
+output = "test.txt"
+oracle = "./test.txt"

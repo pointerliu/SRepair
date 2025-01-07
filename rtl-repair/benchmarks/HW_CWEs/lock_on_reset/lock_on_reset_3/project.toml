@@ -1,0 +1,20 @@
+[project]
+directory = "."
+sources = ["bug2-func-safe.v"]
+toplevel = "lock_on_reset"
+
+[[bugs]]
+name = "lock_on_reset_3"
+original = "bug2-func-safe.v"
+buggy = "bug2-nonfunc-1.v"
+
+#[[bugs]]
+#name = "bug1-func-unsafe"
+#original = "./bug1-func-safe.v"
+#buggy = "./bug1-func-unsafe.v"
+
+[[testbenches]]
+name = "lock_on_reset_tb.v"
+sources = ["./tb_bug2.sv"]
+output = "output_bug1_lock_on_reset_1.txt"
+table = "./test.txt"

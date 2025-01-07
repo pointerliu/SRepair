@@ -1,0 +1,16 @@
+diff -u buggy/JG3_test.v fixed/JG3_test.v
+--- buggy/JG3_test.v	2022-06-13 02:48:55.521838482 -0700
++++ fixed/JG3_test.v	2022-06-13 02:48:55.521838482 -0700
+@@ -15,9 +15,9 @@
+ 		3'b010:begin X<=1'b0;Y<=1'b0;end
+ 		3'b011:begin X<=1'b0;Y<=1'b0;end
+ 		3'b100:begin X<=1'b0;Y<=1'b0;end
+-		3'b101:begin X<=1'b0;Y<=1'b0;end
+-		3'b110:begin X<=1'b0;Y<=1'b0;end
+-		3'b111:begin X<=1'b0;Y<=1'b0;end
++		3'b101:begin X<=1'b1;Y<=1'b0;end
++		3'b110:begin X<=1'b1;Y<=1'b0;end
++		3'b111:begin X<=1'b1;Y<=1'b0;end
+ 		endcase
+ 
+         

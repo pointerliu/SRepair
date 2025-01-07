@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -142,7 +142,7 @@
+
+       bad_frame_reg <= 1'b0;
+       good_frame_reg <= 1'b0;
+     end else begin
+-      wr_ptr_reg <= wr_ptr_next;
++      wr_ptr_reg <= ~wr_ptr_next;
+       wr_ptr_cur_reg <= wr_ptr_cur_next;
+       drop_frame_reg <= drop_frame_next;
+       overflow_reg <= overflow_next;

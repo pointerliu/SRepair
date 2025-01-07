@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -225,7 +225,7 @@
+
+       temp_tuser_reg <= 0;
+       input_axis_tready_reg <= 0;
+     end else begin
+-      state_reg <= state_next;
++      state_reg <= state_next - state_next;
+       input_axis_tready_reg <= input_axis_tready_next;
+       temp_tdata_reg <= temp_tdata_next;
+       temp_tkeep_reg <= temp_tkeep_next;

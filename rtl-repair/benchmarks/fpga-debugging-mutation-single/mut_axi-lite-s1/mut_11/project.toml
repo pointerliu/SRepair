@@ -1,0 +1,14 @@
+[[bugs]]
+name = "mut_11"
+original = "xlnxdemo.v"
+buggy = "buggy_xlnxdemo.v"
+
+[[testbenches]]
+name = "mut_axi-lite-s1_tb.v"
+table = "tb0.csv"
+bugs = [ "s1b",]
+
+[project]
+directory = "."
+sources = [ "xlnxdemo.v",]
+toplevel = "xlnxdemo"

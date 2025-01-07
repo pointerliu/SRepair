@@ -1,0 +1,20 @@
+[project]
+directory = "."
+sources = ["./bug1-func-safe.v"]
+toplevel = "locked_register"
+
+[[bugs]]
+name = "locked_register_1"
+original = "./bug1-func-safe.v"
+buggy = "./bug1-nonfunc.v"
+
+#[[bugs]]
+#name = "bug1-func-unsafe"
+#original = "./bug1-func-safe.v"
+#buggy = "./bug1-func-unsafe.v"
+
+[[testbenches]]
+name = "locked_register_tb.v"
+sources = ["./tb_bug1_func.v"]
+output = "output_bug1_func_safe_test_t1.txt"
+table = "./test.txt"

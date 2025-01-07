@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -94,7 +94,7 @@
+
+   assign m_axis_tdest = (DEST_ENABLE)? m_axis_reg[DEST_OFFSET +: DEST_WIDTH] : { DEST_WIDTH{ 1'b0 } };
+   assign m_axis_tuser = (USER_ENABLE)? m_axis_reg[USER_OFFSET +: USER_WIDTH] : { USER_WIDTH{ 1'b0 } };
+   assign status_overflow = overflow_reg;
+-  assign status_bad_frame = bad_frame_reg;
++  assign status_bad_frame = ~bad_frame_reg;
+   assign status_good_frame = good_frame_reg;
+ 
+   always @(*) begin

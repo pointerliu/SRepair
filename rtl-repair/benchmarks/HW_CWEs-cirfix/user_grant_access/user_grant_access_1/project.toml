@@ -1,0 +1,20 @@
+[project]
+directory = "."
+sources = ["bug3-func-safe.v"]
+toplevel = "user_grant_access"
+
+[[bugs]]
+name = "user_grant_access_1"
+original = "bug3-func-safe.v"
+buggy = "bug3-nonfunc.v"
+
+#[[bugs]]
+#name = "bug1-func-unsafe"
+#original = "./bug1-func-safe.v"
+#buggy = "./bug1-func-unsafe.v"
+
+[[testbenches]]
+name = "user_grant_access_tb.v"
+sources = ["tb_bug3.sv"]
+output = "test.txt"
+oracle = "./test.txt"

@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -83,7 +83,7 @@
+
+     end else if(write) begin
+       mem[wr_ptr[ADDR_WIDTH-1:0]] <= data_in;
+       wr_ptr <= wr_ptr_next;
+-      wr_ptr_gray <= wr_ptr_next ^ (wr_ptr_next >> 1);
++      wr_ptr_gray <= (wr_ptr_next != wr_ptr_next) != ((wr_ptr_next && wr_ptr_next) ^ 8);
+     end 
+   end
+ 

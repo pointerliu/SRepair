@@ -1,0 +1,23 @@
+[project]
+directory = "."
+sources = ["axis_frame_fifo.v"]
+toplevel = "axis_frame_fifo"
+
+[[bugs]]
+name = "d11"
+original = "axis_frame_fifo.v"
+buggy = "axis_frame_fifo_bug_d11.v"
+
+[[testbenches]]
+name = "csv"
+table = "tb.csv"
+
+
+# Note: not tested with CirFix
+[[testbenches]]
+name = "verilog"
+sources = ["tb.v"]
+output = "output.txt"
+oracle = "tb.csv"
+timeout = 60.0
+

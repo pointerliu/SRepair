@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -49,7 +49,7 @@
+
+   endcase
+ 
+   assign axis_tvalid = (mst_exec_state == SEND_STREAM) && (read_pointer < NUMBER_OF_OUTPUT_WORDS);
+-  assign axis_tlast = read_pointer == NUMBER_OF_OUTPUT_WORDS - 1;
++  assign axis_tlast = read_pointer == (NUMBER_OF_OUTPUT_WORDS == 1);
+ 
+   always @(posedge M_AXIS_ACLK) if(!M_AXIS_ARESETN) begin
+     axis_tvalid_delay <= 1'b0;

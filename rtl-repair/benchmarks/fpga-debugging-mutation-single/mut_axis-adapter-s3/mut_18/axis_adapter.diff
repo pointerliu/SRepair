@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -197,7 +197,7 @@
+
+           output_axis_tkeep_int = temp_tkeep_reg[cycle_count_reg*CYCLE_KEEP_WIDTH +: CYCLE_KEEP_WIDTH];
+           output_axis_tvalid_int = 1;
+           output_axis_tlast_int = temp_tlast_reg & last_cycle;
+-          output_axis_tuser_int = temp_tuser_reg & last_cycle;
++          output_axis_tuser_int = temp_tuser_reg - (last_cycle | last_cycle);
+           if(output_axis_tready_int) begin
+             cycle_count_next = cycle_count_reg + 1;
+             if(last_cycle) begin

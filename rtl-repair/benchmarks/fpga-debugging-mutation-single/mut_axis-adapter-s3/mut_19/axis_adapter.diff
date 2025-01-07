@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -284,7 +284,7 @@
+
+       end else if(output_axis_tready) begin
+         output_axis_tdata_reg <= temp_axis_tdata_reg;
+         output_axis_tkeep_reg <= temp_axis_tkeep_reg;
+-        output_axis_tvalid_reg <= temp_axis_tvalid_reg;
++        output_axis_tvalid_reg <= ~temp_axis_tvalid_reg;
+         output_axis_tlast_reg <= temp_axis_tlast_reg;
+         output_axis_tuser_reg <= temp_axis_tuser_reg;
+         temp_axis_tdata_reg <= 0;

@@ -1,0 +1,13 @@
+[[bugs]]
+name = "mut_5"
+original = "axis_async_fifo.v"
+buggy = "buggy_axis_async_fifo.v"
+
+[[testbenches]]
+name = "mut_axis-async-fifo-c4_tb.v"
+table = "tb.csv"
+
+[project]
+directory = "."
+sources = [ "axis_async_fifo.v", "axis_fifo_wrapper.v", "axis_register.v",]
+toplevel = "axis_fifo_wrapper"

@@ -1,0 +1,12 @@
+diff -u buggy/JG3_test.v fixed/JG3_test.v
+--- buggy/JG3_test.v	2022-06-13 02:48:55.677833379 -0700
++++ fixed/JG3_test.v	2022-06-13 02:48:55.681833248 -0700
+@@ -38,7 +38,7 @@
+         begin
+         X=1;Y=0;
+         end
+-        else begin X=1;Y=1;end
++        else begin X=1;Y=0;end
+     end   
+ 	    
+ 

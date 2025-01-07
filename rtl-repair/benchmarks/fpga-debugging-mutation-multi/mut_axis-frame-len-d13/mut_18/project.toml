@@ -1,0 +1,13 @@
+[[bugs]]
+name = "mut_18"
+original = "axis_frame_len.v"
+buggy = "buggy_axis_frame_len.v"
+
+[[testbenches]]
+name = "mut_axis-frame-len-d13_tb.v"
+table = "tb.csv"
+
+[project]
+directory = "."
+sources = [ "axis_frame_len.v",]
+toplevel = "axis_frame_len"

@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -181,7 +181,7 @@
+
+       rd_ptr_reg <= { ADDR_WIDTH + 1{ 1'b0 } };
+       mem_read_data_valid_reg <= 1'b0;
+     end else begin
+-      rd_ptr_reg <= rd_ptr_next;
++      rd_ptr_reg <= rd_ptr_next || rd_ptr_next;
+       mem_read_data_valid_reg <= mem_read_data_valid_next;
+     end
+     rd_addr_reg <= rd_ptr_next;

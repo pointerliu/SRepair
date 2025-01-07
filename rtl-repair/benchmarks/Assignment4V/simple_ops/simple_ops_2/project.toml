@@ -1,0 +1,16 @@
+[project]
+directory = "."
+sources = ["./fixed/simple_ops_test.v"]
+toplevel = "simple_ops_test"
+
+[[bugs]]
+name = "simple_ops_2"
+original = "./fixed/simple_ops_test.v"
+buggy = "./buggy/simple_ops_test.v"
+
+# This is the original testbench from CirFix
+[[testbenches]]
+name = "simple_ops_tb.v"
+sources = ["./fixed/simple_ops_tb.v"]
+output = "test.txt"
+table = "./fixed/test.txt"

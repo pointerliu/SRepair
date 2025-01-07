@@ -1,0 +1,12 @@
+diff -u buggy/counter6bit_test.v fixed/counter6bit_test.v
+--- buggy/counter6bit_test.v	2022-06-13 02:48:56.473807364 -0700
++++ fixed/counter6bit_test.v	2022-06-13 02:48:56.473807364 -0700
+@@ -5,7 +5,7 @@
+ input clk,
+ output wire[3:0] caout,
+ output  reg mf);
+-reg [3:0] moutq=0;
++reg [3:0] moutq;
+ assign caout = moutq;
+ always@(posedge bclk) begin
+ if(clr)

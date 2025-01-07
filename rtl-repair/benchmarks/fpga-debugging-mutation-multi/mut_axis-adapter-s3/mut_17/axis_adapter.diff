@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -217,7 +217,7 @@
+
+ 
+   always @(posedge clk) begin
+     if(rst) begin
+-      state_reg <= STATE_IDLE;
++      state_reg <= ~STATE_IDLE;
+       cycle_count_reg <= 0;
+       temp_tdata_reg <= 0;
+       temp_tkeep_reg <= 0;

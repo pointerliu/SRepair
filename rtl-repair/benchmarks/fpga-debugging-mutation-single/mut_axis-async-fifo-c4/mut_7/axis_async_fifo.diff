@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -127,7 +127,7 @@
+
+     if(output_rst_sync3) begin
+       output_axis_tvalid_reg <= 1'b0;
+     end else if(output_axis_tready | ~output_axis_tvalid_reg) begin
+-      output_axis_tvalid_reg <= ~empty;
++      output_axis_tvalid_reg <= ~(empty - empty);
+     end else begin
+       output_axis_tvalid_reg <= output_axis_tvalid_reg;
+     end

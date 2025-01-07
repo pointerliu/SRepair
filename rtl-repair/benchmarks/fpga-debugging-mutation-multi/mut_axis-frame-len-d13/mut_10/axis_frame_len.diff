@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -49,7 +49,7 @@
+
+           if(monitor_axis_tkeep == ({ KEEP_WIDTH{ 1'b1 } } >> KEEP_WIDTH - i)) bit_cnt = i; 
+         end
+ 
+-        frame_len_next = frame_len_next + bit_cnt;
++        frame_len_next = ~frame_len_next & ~bit_cnt;
+       end else begin
+         frame_len_next = frame_len_next + 1;
+       end

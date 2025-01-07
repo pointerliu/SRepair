@@ -1,0 +1,13 @@
+[[bugs]]
+name = "mut_18"
+original = "axis_frame_fifo.v"
+buggy = "buggy_axis_frame_fifo.v"
+
+[[testbenches]]
+name = "mut_axis-frame-fifo-d11_tb.v"
+table = "tb.csv"
+
+[project]
+directory = "."
+sources = [ "axis_frame_fifo.v",]
+toplevel = "axis_frame_fifo"

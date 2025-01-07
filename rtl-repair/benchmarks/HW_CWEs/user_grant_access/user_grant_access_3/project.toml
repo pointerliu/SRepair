@@ -1,0 +1,20 @@
+[project]
+directory = "."
+sources = ["bug3-func-safe-1.v"]
+toplevel = "user_grant_access"
+
+[[bugs]]
+name = "user_grant_access_3"
+original = "bug3-func-safe-1.v"
+buggy = "bug3-func-unsafe.v"
+
+#[[bugs]]
+#name = "bug1-func-unsafe"
+#original = "./bug1-func-safe.v"
+#buggy = "./bug1-func-unsafe.v"
+
+[[testbenches]]
+name = "user_grant_access_tb.v"
+sources = ["tb_bug3.sv"]
+output = "output_bug1_func_safe_test_t1.txt"
+table = "./test.txt"

@@ -1,0 +1,15 @@
+diff -u buggy/counter6bit_test.v fixed/counter6bit_test.v
+--- buggy/counter6bit_test.v	2022-06-13 02:48:57.341779024 -0700
++++ fixed/counter6bit_test.v	2022-06-13 02:48:57.341779024 -0700
+@@ -13,8 +13,10 @@
+ 		
+ 
+     always@(posedge F_IN,posedge CLR) begin
+-        if(CLR==1)
++        if(CLR==1&&F_IN==1)
+             Q=24'b0;
++        else if(CLR==1&&F_IN==0)
++            Q=Q;
+         else begin
+             Q=Q+ENA;
+             Q[7:4]=Q[7:4]+(Q[3:0]==4'ha);

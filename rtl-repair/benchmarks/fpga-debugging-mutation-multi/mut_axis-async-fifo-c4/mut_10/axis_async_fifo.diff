@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -117,7 +117,7 @@
+
+       wr_ptr_gray_sync1 <= 0;
+       wr_ptr_gray_sync2 <= 0;
+     end else begin
+-      wr_ptr_gray_sync1 <= wr_ptr_gray;
++      wr_ptr_gray_sync1 <= ~wr_ptr_gray;
+       wr_ptr_gray_sync2 <= wr_ptr_gray_sync1;
+     end
+   end

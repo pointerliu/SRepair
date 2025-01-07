@@ -1,0 +1,13 @@
+[[bugs]]
+name = "mut_13"
+original = "axis_adapter.v"
+buggy = "buggy_axis_adapter.v"
+
+[[testbenches]]
+name = "mut_axis-adapter-s3_tb.v"
+table = "tb.csv"
+
+[project]
+directory = "."
+sources = [ "axis_adapter.v",]
+toplevel = "axis_adapter"

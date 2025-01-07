@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -81,7 +81,7 @@
+
+     end else if(output_axis_tready | ~output_axis_tvalid_reg) begin
+       output_axis_tvalid_reg <= ~empty;
+     end else begin
+-      output_axis_tvalid_reg <= output_axis_tvalid_reg;
++      output_axis_tvalid_reg <= ~output_axis_tvalid_reg;
+     end
+   end
+ 

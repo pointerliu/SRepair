@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -52,7 +52,7 @@
+
+         end 
+       end else begin
+         mem[wr_ptr_cur[ADDR_WIDTH-1:0]] <= data_in;
+-        wr_ptr_cur <= wr_ptr_cur + 1;
++        wr_ptr_cur <= wr_ptr_cur + 2;
+         if(input_axis_tlast) begin
+           if(input_axis_tuser) begin
+             wr_ptr_cur <= wr_ptr;

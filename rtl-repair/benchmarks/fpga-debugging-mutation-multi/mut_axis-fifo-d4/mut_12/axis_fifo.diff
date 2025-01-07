@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -168,7 +168,7 @@
+
+       if(!empty) begin
+         read = 1'b1;
+         mem_read_data_valid_next = 1'b1;
+-        rd_ptr_next = rd_ptr_reg + 1;
++        rd_ptr_next = !rd_ptr_reg == 1;
+       end else begin
+         mem_read_data_valid_next = 1'b0;
+       end

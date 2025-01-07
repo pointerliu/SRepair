@@ -1,0 +1,6 @@
+time,Data_in,resetn,write,lock_status,debug_unlocked,Data_out
+10,   16,0,0,0,0,    x
+30, 4112,1,1,0,0,    0
+50,   16,1,1,0,0, 4112
+70, 4112,1,0,0,0,   16
+90,   17,1,1,1,0,   16

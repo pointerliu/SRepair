@@ -1,0 +1,100 @@
+$date
+	Thu Jan 11 10:42:17 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module decoder3e_tb $end
+$var wire 8 ! y [7:0] $end
+$var reg 3 " a [2:0] $end
+$var reg 1 # ena $end
+$var reg 1 $ instrumented_clk $end
+$var integer 32 % f [31:0] $end
+$var integer 32 & i [31:0] $end
+$scope module dec3e $end
+$var wire 3 ' a [2:0] $end
+$var wire 1 # ena $end
+$var reg 8 ( y [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1 (
+b0 '
+b1 &
+b10000000000000000000000000000011 %
+0$
+1#
+b0 "
+b1 !
+$end
+#1
+b10 !
+b10 (
+b10 &
+b1 "
+b1 '
+1$
+#2
+b11 !
+b11 (
+b11 &
+b10 "
+b10 '
+0$
+#3
+b1000 !
+b1000 (
+b100 &
+b11 "
+b11 '
+1$
+#4
+b10000 !
+b10000 (
+b101 &
+b100 "
+b100 '
+0$
+#5
+b100000 !
+b100000 (
+b110 &
+b101 "
+b101 '
+1$
+#6
+b1000000 !
+b1000000 (
+b111 &
+b110 "
+b110 '
+0$
+#7
+b10000000 !
+b10000000 (
+b1000 &
+b111 "
+b111 '
+1$
+#8
+b0 !
+b0 (
+0#
+0$
+#9
+b1 !
+b1 (
+b0 "
+b0 '
+1#
+1$
+#10
+0$

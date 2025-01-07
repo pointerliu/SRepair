@@ -1,0 +1,12 @@
+diff -u buggy/counter6bit_test.v fixed/counter6bit_test.v
+--- buggy/counter6bit_test.v	2022-06-13 02:48:59.177719181 -0700
++++ fixed/counter6bit_test.v	2022-06-13 02:48:59.177719181 -0700
+@@ -14,7 +14,7 @@
+     if(CLR == 1) Q<=0;
+     else if(ENA == 0) Q<=Q;
+     else begin
+-       if(Q[3:0] != 10)begin
++       if(Q[3:0] != 9)begin
+             Q[3:0] <= Q[3:0] + 1;
+        end
+        else begin

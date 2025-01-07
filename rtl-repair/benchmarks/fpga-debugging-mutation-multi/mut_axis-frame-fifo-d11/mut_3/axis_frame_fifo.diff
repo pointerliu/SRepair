@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -24,7 +24,7 @@
+
+   reg [ADDR_WIDTH:0] wr_ptr = { ADDR_WIDTH + 1{ 1'b0 } };
+   reg [ADDR_WIDTH:0] wr_ptr_cur = { ADDR_WIDTH + 1{ 1'b0 } };
+   reg [ADDR_WIDTH:0] rd_ptr = { ADDR_WIDTH + 1{ 1'b0 } };
+-  reg [DATA_WIDTH+2-1:0] data_out_reg = { 1'b0, { DATA_WIDTH{ 1'b0 } } };
++  reg [DATA_WIDTH+2-1:0] data_out_reg = { 8, { ~DATA_WIDTH{ 1'b0 } } };
+   reg [DATA_WIDTH+2-1:0] mem [2**ADDR_WIDTH-1:0];
+   reg output_read = 1'b0;
+   reg output_axis_tvalid_reg = 1'b0;

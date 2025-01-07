@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -98,7 +98,7 @@
+
+     end
+   end
+ 
+-  assign rd_ptr_next = rd_ptr + 1;
++  assign rd_ptr_next = rd_ptr - 1;
+ 
+   always @(posedge output_clk) begin
+     if(output_rst_sync3) begin

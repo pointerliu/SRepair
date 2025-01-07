@@ -1,0 +1,17 @@
+diff -u buggy/counter6bit_test.v fixed/counter6bit_test.v
+--- buggy/counter6bit_test.v	2022-06-13 02:48:56.717799394 -0700
++++ fixed/counter6bit_test.v	2022-06-13 02:48:56.717799394 -0700
+@@ -13,10 +13,11 @@
+ 
+ 		
+ 
+-    always@(posedge F_IN, posedge CLR)
++    
++    always@(posedge F_IN)
+     begin
+         if(CLR == 1)
+-            num <= 0;
++            num <= 32'b0;
+         else if(ENA == 1)
+         begin
+         if(num == 999999)

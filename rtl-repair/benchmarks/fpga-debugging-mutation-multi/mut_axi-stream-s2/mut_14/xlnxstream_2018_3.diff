@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -65,7 +65,7 @@
+
+     tx_done <= 1'b0;
+   end else if(read_pointer <= NUMBER_OF_OUTPUT_WORDS - 1) begin
+     if(tx_en) begin
+-      read_pointer <= read_pointer + 1;
++      read_pointer <= (read_pointer && read_pointer) == 1;
+       tx_done <= 1'b0;
+     end 
+   end else if(read_pointer == NUMBER_OF_OUTPUT_WORDS) begin

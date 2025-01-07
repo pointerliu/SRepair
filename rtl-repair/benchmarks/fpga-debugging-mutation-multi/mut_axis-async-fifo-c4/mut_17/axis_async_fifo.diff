@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -45,7 +45,7 @@
+
+   wire empty = rd_ptr_gray == wr_ptr_gray_sync2;
+   wire write = input_axis_tvalid & ~full;
+   wire read = (output_axis_tready | ~output_axis_tvalid_reg) & ~empty;
+-  assign { output_axis_tlast, output_axis_tuser, output_axis_tdata } = data_out_reg;
++  assign { output_axis_tlast, output_axis_tuser, output_axis_tdata } = ~data_out_reg;
+   assign input_axis_tready = ~full & ~input_rst_sync3;
+   assign output_axis_tvalid = output_axis_tvalid_reg;
+ 

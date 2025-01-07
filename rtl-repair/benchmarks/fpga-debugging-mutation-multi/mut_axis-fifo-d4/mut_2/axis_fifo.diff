@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -135,7 +135,7 @@
+
+ 
+   always @(posedge clk) begin
+     if(rst) begin
+-      wr_ptr_reg <= { ADDR_WIDTH + 1{ 1'b0 } };
++      wr_ptr_reg <= { !ADDR_WIDTH + 1{ 1 } };
+       wr_ptr_cur_reg <= { ADDR_WIDTH + 1{ 1'b0 } };
+       drop_frame_reg <= 1'b0;
+       overflow_reg <= 1'b0;

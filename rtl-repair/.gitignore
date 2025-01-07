@@ -1,0 +1,6 @@
+.idea
+wk_dir
+working-dir
+__pycache__/
+venv
+backup

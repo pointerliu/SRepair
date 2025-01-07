@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -38,7 +38,7 @@
+
+     mst_exec_state <= IDLE;
+     count <= 0;
+   end else case(mst_exec_state)
+-    IDLE: mst_exec_state <= INIT_COUNTER;
++    IDLE: mst_exec_state <= INIT_COUNTER + INIT_COUNTER;
+     INIT_COUNTER: if(count == C_M_START_COUNT - 1) mst_exec_state <= SEND_STREAM; 
+     else begin
+       count <= count + 1;

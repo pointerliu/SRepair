@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -70,7 +70,7 @@
+
+     end else begin
+       output_rst_sync1 <= 0;
+       output_rst_sync2 <= output_rst_sync1;
+-      output_rst_sync3 <= output_rst_sync2;
++      output_rst_sync3 <= ~output_rst_sync2;
+     end
+   end
+ 

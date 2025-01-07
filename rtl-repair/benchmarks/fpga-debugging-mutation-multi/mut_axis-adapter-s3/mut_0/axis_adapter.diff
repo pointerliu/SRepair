@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -245,7 +245,7 @@
+
+   reg temp_axis_tvalid_reg = 0;
+   reg temp_axis_tlast_reg = 0;
+   reg temp_axis_tuser_reg = 0;
+-  assign output_axis_tdata = output_axis_tdata_reg;
++  assign output_axis_tdata = ~output_axis_tdata_reg;
+   assign output_axis_tkeep = output_axis_tkeep_reg;
+   assign output_axis_tvalid = output_axis_tvalid_reg;
+   assign output_axis_tlast = output_axis_tlast_reg;

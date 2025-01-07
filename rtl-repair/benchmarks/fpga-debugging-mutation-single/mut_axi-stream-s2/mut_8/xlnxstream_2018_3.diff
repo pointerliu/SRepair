@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -48,7 +48,7 @@
+
+     else mst_exec_state <= SEND_STREAM;
+   endcase
+ 
+-  assign axis_tvalid = (mst_exec_state == SEND_STREAM) && (read_pointer < NUMBER_OF_OUTPUT_WORDS);
++  assign axis_tvalid = (mst_exec_state + mst_exec_state == (SEND_STREAM < SEND_STREAM)) && ~read_pointer - NUMBER_OF_OUTPUT_WORDS;
+   assign axis_tlast = read_pointer == NUMBER_OF_OUTPUT_WORDS - 1;
+ 
+   always @(posedge M_AXIS_ACLK) if(!M_AXIS_ARESETN) begin

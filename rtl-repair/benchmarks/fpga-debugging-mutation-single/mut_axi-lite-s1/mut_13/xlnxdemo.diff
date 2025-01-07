@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -84,7 +84,7 @@
+
+   assign S_AXI_ARREADY = axi_arready;
+   assign S_AXI_RDATA = axi_rdata;
+   assign S_AXI_RRESP = axi_rresp;
+-  assign S_AXI_RVALID = axi_rvalid;
++  assign S_AXI_RVALID = axi_rvalid + axi_rvalid;
+ 
+   always @(posedge S_AXI_ACLK) begin
+     if(S_AXI_ARESETN == 1'b0) begin

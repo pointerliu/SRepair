@@ -1,0 +1,15 @@
+from rtlrepair.snn_templates.add_cond_expr import add_cond_expr
+from rtlrepair.snn_templates.replace_cond_expr import replace_cond_expr
+
+from rtlrepair.snn_templates.edge_flip import edge_flip
+from rtlrepair.snn_templates.t0_type_voting import type_voting
+from rtlrepair.snn_templates.t1_replace_atom import t1_replace_atom
+from rtlrepair.snn_templates.t2_replace_cond import t2_replace_cond
+from rtlrepair.snn_templates.t3_replace_assign import t3_replace_assign
+from rtlrepair.snn_templates.t3_replace_assign_rr_t import t3_replace_assign_rr_t
+from rtlrepair.snn_templates.t3_replace_assign_rr_synth import t3_replace_assign_rr_synth
+from rtlrepair.snn_templates.t4_add_substitution import t4_add_substitution
+from rtlrepair.snn_templates.t4_add_substitution_rr_synth import t4_add_substitution_rr_synth
+from rtlrepair.snn_templates.t5_change_timing_assign import t5_change_timing_assign
+from rtlrepair.snn_templates.t5_change_timing_subs import t5_change_timing_subs_pre, t5_change_timing_subs_post
+from rtlrepair.snn_templates.t6_cond_overwrite_rr_t import t6_cond_overwrite_rr_t_pre, t6_cond_overwrite_rr_t_post

@@ -1,0 +1,15 @@
+diff -u buggy/counter6bit_test.v fixed/counter6bit_test.v
+--- buggy/counter6bit_test.v	2022-06-13 02:48:58.889728559 -0700
++++ fixed/counter6bit_test.v	2022-06-13 02:48:58.889728559 -0700
+@@ -12,9 +12,9 @@
+ 
+ 		
+ 
+-always@(posedge F_IN or posedge CLR)
++always@(posedge F_IN )
+ begin
+-    if(CLR) Q<=24'b0000_0000_0000_0000_0000_xxxx;
++    if(CLR) Q<=24'b0000_0000_0000_0000_0000_0000;
+     else if(!ENA) Q[3:0]<=Q[3:0];
+         else  if (Q[3:0] < 4'b1001)       
+                 Q[3:0] <= Q[3:0] +4'b0001;

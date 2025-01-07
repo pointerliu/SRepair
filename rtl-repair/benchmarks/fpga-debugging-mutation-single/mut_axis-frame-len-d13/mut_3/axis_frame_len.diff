@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -25,7 +25,7 @@
+
+   reg frame_reg = 1'b0;
+   reg frame_next;
+   assign frame_len = frame_len_reg;
+-  assign frame_len_valid = frame_len_valid_reg;
++  assign frame_len_valid = frame_len_valid_reg + frame_len_valid_reg;
+   integer offset;integer i;integer bit_cnt;
+ 
+   always @(*) begin

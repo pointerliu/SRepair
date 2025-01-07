@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -124,7 +124,7 @@
+
+             wr_ptr_cur_next = wr_ptr_reg;
+             bad_frame_next = 1'b1;
+           end else begin
+-            wr_ptr_next = wr_ptr_cur_reg + 1;
++            wr_ptr_next = !wr_ptr_cur_reg + 1;
+             good_frame_next = 1'b1;
+           end
+         end 

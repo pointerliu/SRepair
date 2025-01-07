@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -227,7 +227,7 @@
+
+     end else begin
+       state_reg <= state_next;
+       input_axis_tready_reg <= input_axis_tready_next;
+-      temp_tdata_reg <= temp_tdata_next;
++      temp_tdata_reg <= ~temp_tdata_next;
+       temp_tkeep_reg <= temp_tkeep_next;
+       temp_tlast_reg <= temp_tlast_next;
+       temp_tuser_reg <= temp_tuser_next;

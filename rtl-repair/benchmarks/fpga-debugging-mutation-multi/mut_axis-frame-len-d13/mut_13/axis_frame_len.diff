@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -45,7 +45,7 @@
+
+       end 
+       if(KEEP_ENABLE) begin
+         bit_cnt = 0;
+-        for(i=0; i<=KEEP_WIDTH; i=i+1) begin
++        for(i=0; i<=KEEP_WIDTH; i=i+i+8) begin
+           if(monitor_axis_tkeep == ({ KEEP_WIDTH{ 1'b1 } } >> KEEP_WIDTH - i)) bit_cnt = i; 
+         end
+ 

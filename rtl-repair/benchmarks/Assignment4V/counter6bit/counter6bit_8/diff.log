@@ -1,0 +1,37 @@
+diff -u buggy/counter6bit_test.v fixed/counter6bit_test.v
+--- buggy/counter6bit_test.v	2022-06-13 02:48:57.297780460 -0700
++++ fixed/counter6bit_test.v	2022-06-13 02:48:57.301780329 -0700
+@@ -4,8 +4,8 @@
+     input F_IN;
+     output [23:0] Q;  
+     
+-   
+     reg [23:0] Q;
++    reg [19:0] temp_bcd=1;
+     reg F_OUT;
+     
+ 
+@@ -17,10 +17,16 @@
+ if(CLR==1) Q<=0;
+ else
+ begin
+-if(ENA==1) Q<=Q+1;
++if(ENA==1)
++begin
++if(Q[3:0]==4'b1001) 
++begin
++temp_bcd<=temp_bcd+1;
++Q<={temp_bcd,4'b0000};
+ end
++else if(Q[7:0]==8'b10000000)  Q<=0;
++else Q=Q+1;
+ end
+-		
+-
+-
+-  endmodule
+\ No newline at end of file
++end
++end
++endmodule
+\ No newline at end of file

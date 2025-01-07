@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -112,7 +112,7 @@
+
+               last_cycle = 0;
+             end
+             temp_tdata_next = input_axis_tdata;
+-            temp_tkeep_next = input_axis_tkeep;
++            temp_tkeep_next = ~input_axis_tkeep;
+             temp_tlast_next = input_axis_tlast;
+             temp_tuser_next = input_axis_tuser;
+             output_axis_tdata_int = input_axis_tdata[CYCLE_DATA_WIDTH-1:0];

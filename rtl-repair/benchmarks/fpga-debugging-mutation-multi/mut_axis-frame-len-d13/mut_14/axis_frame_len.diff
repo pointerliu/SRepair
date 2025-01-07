@@ -1,0 +1,14 @@
+--- 
+
++++ 
+
+@@ -30,7 +30,7 @@
+
+ 
+   always @(*) begin
+     i = 0;
+-    frame_len_next = frame_len_reg;
++    frame_len_next = frame_len_reg + frame_len_reg;
+     frame_len_valid_next = 1'b0;
+     frame_next = frame_reg;
+     if(frame_len_valid_reg) begin
